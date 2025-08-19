@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Okanagan-Adventure-Rentals/static/css/main.c33832ca.css",
+    "main.js": "/Okanagan-Adventure-Rentals/static/js/main.0c062249.js",
+    "static/js/453.87105923.chunk.js": "/Okanagan-Adventure-Rentals/static/js/453.87105923.chunk.js",
+    "index.html": "/Okanagan-Adventure-Rentals/index.html",
+    "main.c33832ca.css.map": "/Okanagan-Adventure-Rentals/static/css/main.c33832ca.css.map",
+    "main.0c062249.js.map": "/Okanagan-Adventure-Rentals/static/js/main.0c062249.js.map",
+    "453.87105923.chunk.js.map": "/Okanagan-Adventure-Rentals/static/js/453.87105923.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c33832ca.css",
+    "static/js/main.0c062249.js"
+  ]
+}

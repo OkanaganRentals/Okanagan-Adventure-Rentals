@@ -360,13 +360,18 @@ const App = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-blue-500 to-cyan-400">
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+      <section
+        className="relative h-96 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://moving2canada.com/wp-content/uploads/2024/02/Kelowna-Downtown-BC.jpg')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-6 h-full flex items-center">
           <div className="text-white">
             <h2 className="text-5xl font-bold mb-4">Rent Premium Boats</h2>
             <p className="text-xl mb-6">
-              Experience the ocean like never before with our luxury fleet
+              Experience the beautiful Okanagan Lake with our luxury fleet
             </p>
             <div className="flex space-x-4">
               <button
@@ -601,10 +606,10 @@ const App = () => {
                   <div>
                     <div className="font-semibold">
                       <a
-                        href="mailto:Avery-John@icloud.com"
+                        href="mailto:Avery_John@icloud.com"
                         className="text-blue-600 hover:text-blue-800 transition-colors cursor-pointer"
                       >
-                        Avery_john@icloud.com
+                        Avery_John@icloud.com
                       </a>
                     </div>
                     <div className="text-gray-600 text-sm">

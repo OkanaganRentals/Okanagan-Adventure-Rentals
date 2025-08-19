@@ -1,38 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the boat rental website */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Custom button hover effects */
+.btn-primary {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-blue-700 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-blue-600 hover:text-white;
+}
+
+.btn-gallery {
+  @apply bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-green-700 hover:shadow-lg;
+}
+
+/* Card animations */
+.boat-card {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+}
+
+/* Modal backdrop blur effect */
+.modal-backdrop {
+  backdrop-filter: blur(5px);
+}
+
+/* Gallery specific styles */
+.gallery-modal {
+  backdrop-filter: blur(10px);
+}
+
+.gallery-thumbnail {
+  @apply transition-all duration-200 hover:scale-105;
+}
+
+.gallery-thumbnail.active {
+  @apply ring-2 ring-blue-400 ring-offset-2 ring-offset-black;
+}
+
+.gallery-nav-button {
+  @apply transition-all duration-200 hover:scale-110 hover:bg-opacity-80;
+}
+
+/* Video player styling */
+.video-container {
+  @apply relative overflow-hidden rounded-lg;
+}
+
+.video-container iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* Custom input focus styles */
+.form-input {
+  @apply w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none;
+}
+
+/* Hero gradient animation */
+.hero-gradient {
+  background: linear-gradient(-45deg, #3b82f6, #06b6d4, #0ea5e9, #0284c7);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* Gallery fade animation */
+@keyframes fadeInGallery {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale(0.9);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: scale(1);
   }
+}
+
+.gallery-item {
+  animation: fadeInGallery 0.3s ease-out;
+}
+
+/* Loading animation for images */
+.boat-image {
+  @apply transition-opacity duration-300;
+}
+
+.boat-image:hover {
+  @apply opacity-90;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Dark scrollbar for gallery */
+.gallery-modal ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.gallery-modal ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.gallery-modal ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .hero-title {
+    @apply text-3xl;
+  }
+
+  .section-title {
+    @apply text-2xl;
+  }
+
+  /* Gallery responsive adjustments */
+  .gallery-thumbnail {
+    @apply w-16 h-12;
+  }
+}
+
+/* Feature icon animations */
+.feature-icon {
+  @apply transition-transform duration-300 hover:scale-110;
+}
+
+/* Price badge */
+.price-badge {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md;
+}
+
+/* Status indicators */
+.status-available {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-busy {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-maintenance {
+  @apply bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Gallery keyboard navigation hints */
+.gallery-controls {
+  @apply text-gray-400 text-sm mt-2;
+}
+
+/* Image zoom effect */
+.gallery-image {
+  @apply transition-transform duration-300 hover:scale-105 cursor-zoom-in;
+}
+
+/* Play button overlay for video thumbnails */
+.video-thumbnail-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center;
+}
+
+.play-button {
+  @apply bg-white bg-opacity-80 rounded-full p-2 transition-all duration-200 hover:bg-opacity-100 hover:scale-110;
 }

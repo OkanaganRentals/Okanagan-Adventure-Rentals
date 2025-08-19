@@ -604,7 +604,7 @@ const App = () => {
                         href="mailto:Avery-John@icloud.com"
                         className="text-blue-600 hover:text-blue-800 transition-colors cursor-pointer"
                       >
-                        Avery-John@icloud.com
+                        Avery_john@icloud.com
                       </a>
                     </div>
                     <div className="text-gray-600 text-sm">
